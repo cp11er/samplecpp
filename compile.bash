@@ -1,4 +1,6 @@
 #!/bin/bash
 
 mkdir -p out
-g++ -o out/sample src/sample.cpp
+cd src
+g++ -c -o ../out/sample.o sample.cpp
+ar rvs ../out/sample.a ../out/sample.o
